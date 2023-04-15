@@ -9,19 +9,30 @@
 /* Begin PBXBuildFile section */
 		1F4D9DCF29EACACA00A00DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DCE29EACACA00A00DF2 /* AppDelegate.swift */; };
 		1F4D9DD129EACACA00A00DF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DD029EACACA00A00DF2 /* SceneDelegate.swift */; };
-		1F4D9DD329EACACA00A00DF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DD229EACACA00A00DF2 /* ViewController.swift */; };
 		1F4D9DD829EACACC00A00DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4D9DD729EACACC00A00DF2 /* Assets.xcassets */; };
 		1F4D9DDB29EACACC00A00DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4D9DD929EACACC00A00DF2 /* LaunchScreen.storyboard */; };
+		1F4D9DE429EACCC800A00DF2 /* ReduxCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1F4D9DE329EACCC800A00DF2 /* ReduxCore */; };
+		1F4D9DE729EACD3D00A00DF2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DE629EACD3D00A00DF2 /* AppState.swift */; };
+		1F4D9DED29EACE5500A00DF2 /* StarterScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DEC29EACE5500A00DF2 /* StarterScreenFactory.swift */; };
+		1F4D9DEF29EACE5E00A00DF2 /* StarterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DEE29EACE5E00A00DF2 /* StarterPresenter.swift */; };
+		1F4D9DF129EACE6600A00DF2 /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DF029EACE6600A00DF2 /* StarterViewController.swift */; };
+		1F4D9DF629EACFFC00A00DF2 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DF529EACFFC00A00DF2 /* Command.swift */; };
+		1F4D9DF829EAD38400A00DF2 /* StoreLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DF729EAD38400A00DF2 /* StoreLocator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F4D9DCB29EACACA00A00DF2 /* starter-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "starter-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4D9DCE29EACACA00A00DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F4D9DD029EACACA00A00DF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F4D9DD229EACACA00A00DF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F4D9DD729EACACC00A00DF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F4D9DDA29EACACC00A00DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F4D9DDC29EACACC00A00DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F4D9DE629EACD3D00A00DF2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		1F4D9DEC29EACE5500A00DF2 /* StarterScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterScreenFactory.swift; sourceTree = "<group>"; };
+		1F4D9DEE29EACE5E00A00DF2 /* StarterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterPresenter.swift; sourceTree = "<group>"; };
+		1F4D9DF029EACE6600A00DF2 /* StarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
+		1F4D9DF529EACFFC00A00DF2 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		1F4D9DF729EAD38400A00DF2 /* StoreLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreLocator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4D9DE429EACCC800A00DF2 /* ReduxCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +66,59 @@
 		1F4D9DCD29EACACA00A00DF2 /* starter-app */ = {
 			isa = PBXGroup;
 			children = (
-				1F4D9DCE29EACACA00A00DF2 /* AppDelegate.swift */,
-				1F4D9DD029EACACA00A00DF2 /* SceneDelegate.swift */,
-				1F4D9DD229EACACA00A00DF2 /* ViewController.swift */,
-				1F4D9DD729EACACC00A00DF2 /* Assets.xcassets */,
-				1F4D9DD929EACACC00A00DF2 /* LaunchScreen.storyboard */,
-				1F4D9DDC29EACACC00A00DF2 /* Info.plist */,
+				1F4D9DFA29EAD4AF00A00DF2 /* Core */,
+				1F4D9DEA29EACE3300A00DF2 /* Presentation */,
+				1F4D9DF929EAD48E00A00DF2 /* SupportingFiles */,
 			);
 			path = "starter-app";
+			sourceTree = "<group>";
+		};
+		1F4D9DE529EACD3000A00DF2 /* ReduxSupport */ = {
+			isa = PBXGroup;
+			children = (
+				1F4D9DE629EACD3D00A00DF2 /* AppState.swift */,
+				1F4D9DF529EACFFC00A00DF2 /* Command.swift */,
+				1F4D9DF729EAD38400A00DF2 /* StoreLocator.swift */,
+			);
+			path = ReduxSupport;
+			sourceTree = "<group>";
+		};
+		1F4D9DEA29EACE3300A00DF2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F4D9DEB29EACE4000A00DF2 /* Main */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1F4D9DEB29EACE4000A00DF2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1F4D9DEC29EACE5500A00DF2 /* StarterScreenFactory.swift */,
+				1F4D9DEE29EACE5E00A00DF2 /* StarterPresenter.swift */,
+				1F4D9DF029EACE6600A00DF2 /* StarterViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1F4D9DF929EAD48E00A00DF2 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1F4D9DDC29EACACC00A00DF2 /* Info.plist */,
+				1F4D9DD929EACACC00A00DF2 /* LaunchScreen.storyboard */,
+				1F4D9DD729EACACC00A00DF2 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1F4D9DFA29EAD4AF00A00DF2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1F4D9DCE29EACACA00A00DF2 /* AppDelegate.swift */,
+				1F4D9DD029EACACA00A00DF2 /* SceneDelegate.swift */,
+				1F4D9DE529EACD3000A00DF2 /* ReduxSupport */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +137,9 @@
 			dependencies = (
 			);
 			name = "starter-app";
+			packageProductDependencies = (
+				1F4D9DE329EACCC800A00DF2 /* ReduxCore */,
+			);
 			productName = "starter-app";
 			productReference = 1F4D9DCB29EACACA00A00DF2 /* starter-app.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +168,9 @@
 				Base,
 			);
 			mainGroup = 1F4D9DC229EACACA00A00DF2;
+			packageReferences = (
+				1F4D9DE229EACCC800A00DF2 /* XCRemoteSwiftPackageReference "ReduxCore" */,
+			);
 			productRefGroup = 1F4D9DCC29EACACA00A00DF2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,9 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F4D9DD329EACACA00A00DF2 /* ViewController.swift in Sources */,
+				1F4D9DEF29EACE5E00A00DF2 /* StarterPresenter.swift in Sources */,
+				1F4D9DF829EAD38400A00DF2 /* StoreLocator.swift in Sources */,
+				1F4D9DF129EACE6600A00DF2 /* StarterViewController.swift in Sources */,
+				1F4D9DF629EACFFC00A00DF2 /* Command.swift in Sources */,
 				1F4D9DCF29EACACA00A00DF2 /* AppDelegate.swift in Sources */,
+				1F4D9DED29EACE5500A00DF2 /* StarterScreenFactory.swift in Sources */,
 				1F4D9DD129EACACA00A00DF2 /* SceneDelegate.swift in Sources */,
+				1F4D9DE729EACD3D00A00DF2 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +412,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F4D9DE229EACCC800A00DF2 /* XCRemoteSwiftPackageReference "ReduxCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/betterme-dev/ReduxCore";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F4D9DE329EACCC800A00DF2 /* ReduxCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F4D9DE229EACCC800A00DF2 /* XCRemoteSwiftPackageReference "ReduxCore" */;
+			productName = ReduxCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F4D9DC329EACACA00A00DF2 /* Project object */;
 }
