@@ -66,7 +66,8 @@
 		1F4D9DCD29EACACA00A00DF2 /* starter-app */ = {
 			isa = PBXGroup;
 			children = (
-				1F4D9DFA29EAD4AF00A00DF2 /* Core */,
+				1F4D9DFA29EAD4AF00A00DF2 /* Application */,
+				1F4D9DFB29EAD56600A00DF2 /* State */,
 				1F4D9DEA29EACE3300A00DF2 /* Presentation */,
 				1F4D9DF929EAD48E00A00DF2 /* SupportingFiles */,
 			);
@@ -76,7 +77,6 @@
 		1F4D9DE529EACD3000A00DF2 /* ReduxSupport */ = {
 			isa = PBXGroup;
 			children = (
-				1F4D9DE629EACD3D00A00DF2 /* AppState.swift */,
 				1F4D9DF529EACFFC00A00DF2 /* Command.swift */,
 				1F4D9DF729EAD38400A00DF2 /* StoreLocator.swift */,
 			);
@@ -86,19 +86,19 @@
 		1F4D9DEA29EACE3300A00DF2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				1F4D9DEB29EACE4000A00DF2 /* Main */,
+				1F4D9DEB29EACE4000A00DF2 /* Starter */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		1F4D9DEB29EACE4000A00DF2 /* Main */ = {
+		1F4D9DEB29EACE4000A00DF2 /* Starter */ = {
 			isa = PBXGroup;
 			children = (
 				1F4D9DEC29EACE5500A00DF2 /* StarterScreenFactory.swift */,
 				1F4D9DEE29EACE5E00A00DF2 /* StarterPresenter.swift */,
 				1F4D9DF029EACE6600A00DF2 /* StarterViewController.swift */,
 			);
-			path = Main;
+			path = Starter;
 			sourceTree = "<group>";
 		};
 		1F4D9DF929EAD48E00A00DF2 /* SupportingFiles */ = {
@@ -111,14 +111,22 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		1F4D9DFA29EAD4AF00A00DF2 /* Core */ = {
+		1F4D9DFA29EAD4AF00A00DF2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				1F4D9DCE29EACACA00A00DF2 /* AppDelegate.swift */,
 				1F4D9DD029EACACA00A00DF2 /* SceneDelegate.swift */,
 				1F4D9DE529EACD3000A00DF2 /* ReduxSupport */,
 			);
-			path = Core;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1F4D9DFB29EAD56600A00DF2 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				1F4D9DE629EACD3D00A00DF2 /* AppState.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7KPN5P5BCP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "starter-app/Info.plist";
+				INFOPLIST_FILE = "starter-app/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -372,7 +380,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7KPN5P5BCP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "starter-app/Info.plist";
+				INFOPLIST_FILE = "starter-app/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

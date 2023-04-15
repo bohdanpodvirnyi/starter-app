@@ -17,6 +17,8 @@ public struct StarterScreenFactory {
     
     public func `default`() -> StarterViewController {
         let controller = StarterViewController()
+        var cancelObserving: Cancellation?
+        
         let dispatch = CommandWith { action in
             store.dispatch(action: action)
         }
@@ -25,8 +27,10 @@ public struct StarterScreenFactory {
             render: CommandWith { props in
                 controller.render(props: props)
             }.dispatchedOnMain(),
-            dispatch: dispatch
+            dispatch: dispatch,
+            endObserving: Command { cancelObserving?.cancel() }
         )
+        cancelObserving = store.observe(with: presenter.present)
         
         return controller
     }
