@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ReduxCore
 
 final class StoreLocator {
     private static var store: Store<AppState>?

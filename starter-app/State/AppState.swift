@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ReduxCore
 
 public struct AppState: Equatable {
     static let initial = AppState()

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ReduxCore
 
 public struct StarterScreenFactory {
     private let store: Store<AppState>
@@ -17,10 +16,12 @@ public struct StarterScreenFactory {
     
     public func `default`() -> StarterViewController {
         let controller = StarterViewController()
-        var cancelObserving: Cancellation?
+        var cancelObserving: Cancellable?
         
         let dispatch = CommandWith { action in
-            store.dispatch(action: action)
+            Task {
+                await store.dispatch(action: action)
+            }
         }
         
         let presenter = StarterPresenter(
@@ -30,7 +31,7 @@ public struct StarterScreenFactory {
             dispatch: dispatch,
             endObserving: Command { cancelObserving?.cancel() }
         )
-        cancelObserving = store.observe(with: presenter.present)
+        cancelObserving = store.observe(action: presenter.present)
         
         return controller
     }

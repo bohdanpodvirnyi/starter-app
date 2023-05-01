@@ -18,6 +18,10 @@
 		1F4D9DF129EACE6600A00DF2 /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DF029EACE6600A00DF2 /* StarterViewController.swift */; };
 		1F4D9DF629EACFFC00A00DF2 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DF529EACFFC00A00DF2 /* Command.swift */; };
 		1F4D9DF829EAD38400A00DF2 /* StoreLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DF729EAD38400A00DF2 /* StoreLocator.swift */; };
+		1FD7FB4C29FFD3F600CBC2DF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7FB4B29FFD3F600CBC2DF /* Store.swift */; };
+		1FD7FB4E29FFD41500CBC2DF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7FB4D29FFD41500CBC2DF /* Action.swift */; };
+		1FD7FB5029FFD86500CBC2DF /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7FB4F29FFD86500CBC2DF /* Subscription.swift */; };
+		1FD7FB5629FFE6E300CBC2DF /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7FB5529FFE6E300CBC2DF /* Cancellable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		1F4D9DF029EACE6600A00DF2 /* StarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
 		1F4D9DF529EACFFC00A00DF2 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		1F4D9DF729EAD38400A00DF2 /* StoreLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreLocator.swift; sourceTree = "<group>"; };
+		1FD7FB4B29FFD3F600CBC2DF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		1FD7FB4D29FFD41500CBC2DF /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		1FD7FB4F29FFD86500CBC2DF /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		1FD7FB5529FFE6E300CBC2DF /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		1F4D9DCD29EACACA00A00DF2 /* starter-app */ = {
 			isa = PBXGroup;
 			children = (
+				1FD7FB4A29FFD3E600CBC2DF /* ReduxCore */,
 				1F4D9DFA29EAD4AF00A00DF2 /* Application */,
 				1F4D9DFB29EAD56600A00DF2 /* State */,
 				1F4D9DEA29EACE3300A00DF2 /* Presentation */,
@@ -127,6 +136,17 @@
 				1F4D9DE629EACD3D00A00DF2 /* AppState.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		1FD7FB4A29FFD3E600CBC2DF /* ReduxCore */ = {
+			isa = PBXGroup;
+			children = (
+				1FD7FB4D29FFD41500CBC2DF /* Action.swift */,
+				1FD7FB4B29FFD3F600CBC2DF /* Store.swift */,
+				1FD7FB4F29FFD86500CBC2DF /* Subscription.swift */,
+				1FD7FB5529FFE6E300CBC2DF /* Cancellable.swift */,
+			);
+			path = ReduxCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +228,10 @@
 				1F4D9DEF29EACE5E00A00DF2 /* StarterPresenter.swift in Sources */,
 				1F4D9DF829EAD38400A00DF2 /* StoreLocator.swift in Sources */,
 				1F4D9DF129EACE6600A00DF2 /* StarterViewController.swift in Sources */,
+				1FD7FB4E29FFD41500CBC2DF /* Action.swift in Sources */,
+				1FD7FB5029FFD86500CBC2DF /* Subscription.swift in Sources */,
+				1FD7FB4C29FFD3F600CBC2DF /* Store.swift in Sources */,
+				1FD7FB5629FFE6E300CBC2DF /* Cancellable.swift in Sources */,
 				1F4D9DF629EACFFC00A00DF2 /* Command.swift in Sources */,
 				1F4D9DCF29EACACA00A00DF2 /* AppDelegate.swift in Sources */,
 				1F4D9DED29EACE5500A00DF2 /* StarterScreenFactory.swift in Sources */,
