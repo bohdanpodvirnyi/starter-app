@@ -9,21 +9,21 @@ import Foundation
 import ReduxCore
 
 extension Actions {
-    enum StarterPresenter {
+    enum StarterProcessor {
         struct DidAppear: Action {}
     }
 }
 
-public struct StarterPresenter {
-    let render: CommandWith<StarterViewController.Props>
+public struct StarterProcessor {
+    let view: StarterView
     let dispatch: CommandWith<Action>
     let endObserving: Command?
     
-    func present(state: AppState) {
-        render.perform(
-            with: StarterViewController.Props(
+    func process(state: AppState) {
+        view.props.update(
+            props: StarterView.Props(
                 onAppear: CommandWith {
-                    dispatch.perform(with: Actions.StarterPresenter.DidAppear())
+                    dispatch.perform(with: Actions.StarterProcessor.DidAppear())
                 }
             )
         )
