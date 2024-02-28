@@ -8,6 +8,12 @@
 import Foundation
 import ReduxCore
 
+extension Actions {
+    enum StarterPresenter {
+        struct DidAppear: Action {}
+    }
+}
+
 public struct StarterPresenter {
     let render: CommandWith<StarterViewController.Props>
     let dispatch: CommandWith<Action>
@@ -15,7 +21,11 @@ public struct StarterPresenter {
     
     func present(state: AppState) {
         render.perform(
-            with: StarterViewController.Props.initial
+            with: StarterViewController.Props(
+                onAppear: CommandWith {
+                    dispatch.perform(with: Actions.StarterPresenter.DidAppear())
+                }
+            )
         )
     }
 }

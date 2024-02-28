@@ -8,6 +8,16 @@
 import UIKit
 import ReduxCore
 
+// MARK: - App lifecycle actions
+extension Actions {
+    enum Application {
+        struct DidFinishLaunch: Action {}
+        struct DidEnterBackground: Action {}
+        struct DidBecomeActive: Action {}
+        struct WillEnterForeground: Action {}
+    }
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -36,7 +46,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 private extension AppDelegate {
     private func configureStore() {
         let state = AppState.initial
-        let store = Store(state: state, reducer: reduce, middlewares: [])
+        let coordinator = AppCoordinator()
+        let store = Store(
+            state: state,
+            reducer: reduce,
+            middlewares: [
+                LoggerMiddleware().middleware(),
+                CoordinatorMiddleware(handler: coordinator.handle).middleware(),
+            ]
+        )
         StoreLocator.populate(with: store)
     }
 }

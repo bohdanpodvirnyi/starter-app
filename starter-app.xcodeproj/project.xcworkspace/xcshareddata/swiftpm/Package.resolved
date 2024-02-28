@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "reduxcore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/betterme-dev/ReduxCore",
+      "state" : {
+        "revision" : "2fa11ca7e36c53a0d4e8b4f9153dc7f0df66a449",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

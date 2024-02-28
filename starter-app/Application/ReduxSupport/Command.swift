@@ -39,6 +39,12 @@ public final class CommandWith<T> {
 
 public typealias Command = CommandWith<Void>
 
+public extension CommandWith where T == Void {
+    func perform() {
+        perform(with: ())
+    }
+}
+
 public extension CommandWith {
     func dispatched(on queue: DispatchQueue) -> CommandWith {
         return CommandWith { [action] value in
@@ -58,5 +64,11 @@ public extension CommandWith {
                 }
             }
         }
+    }
+}
+
+extension CommandWith: Equatable {
+    public static func == (lhs: CommandWith<T>, rhs: CommandWith<T>) -> Bool {
+        lhs.id == rhs.id
     }
 }

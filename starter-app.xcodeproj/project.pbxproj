@@ -18,6 +18,9 @@
 		1F4D9DF129EACE6600A00DF2 /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DF029EACE6600A00DF2 /* StarterViewController.swift */; };
 		1F4D9DF629EACFFC00A00DF2 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DF529EACFFC00A00DF2 /* Command.swift */; };
 		1F4D9DF829EAD38400A00DF2 /* StoreLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D9DF729EAD38400A00DF2 /* StoreLocator.swift */; };
+		1FBC13162B8F3BA200E3FAEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC13152B8F3BA200E3FAEE /* AppCoordinator.swift */; };
+		1FBC13192B8F3C2F00E3FAEE /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC13182B8F3C2F00E3FAEE /* LoggerMiddleware.swift */; };
+		1FBC131B2B8F3C4600E3FAEE /* CoordinatorMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC131A2B8F3C4600E3FAEE /* CoordinatorMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		1F4D9DF029EACE6600A00DF2 /* StarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
 		1F4D9DF529EACFFC00A00DF2 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		1F4D9DF729EAD38400A00DF2 /* StoreLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreLocator.swift; sourceTree = "<group>"; };
+		1FBC13152B8F3BA200E3FAEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1FBC13182B8F3C2F00E3FAEE /* LoggerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMiddleware.swift; sourceTree = "<group>"; };
+		1FBC131A2B8F3C4600E3FAEE /* CoordinatorMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorMiddleware.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		1F4D9DEA29EACE3300A00DF2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1FBC13152B8F3BA200E3FAEE /* AppCoordinator.swift */,
 				1F4D9DEB29EACE4000A00DF2 /* Starter */,
 			);
 			path = Presentation;
@@ -114,6 +121,7 @@
 		1F4D9DFA29EAD4AF00A00DF2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1FBC13172B8F3C1E00E3FAEE /* Middlewares */,
 				1F4D9DCE29EACACA00A00DF2 /* AppDelegate.swift */,
 				1F4D9DD029EACACA00A00DF2 /* SceneDelegate.swift */,
 				1F4D9DE529EACD3000A00DF2 /* ReduxSupport */,
@@ -127,6 +135,15 @@
 				1F4D9DE629EACD3D00A00DF2 /* AppState.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		1FBC13172B8F3C1E00E3FAEE /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				1FBC13182B8F3C2F00E3FAEE /* LoggerMiddleware.swift */,
+				1FBC131A2B8F3C4600E3FAEE /* CoordinatorMiddleware.swift */,
+			);
+			path = Middlewares;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,12 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FBC131B2B8F3C4600E3FAEE /* CoordinatorMiddleware.swift in Sources */,
 				1F4D9DEF29EACE5E00A00DF2 /* StarterPresenter.swift in Sources */,
+				1FBC13192B8F3C2F00E3FAEE /* LoggerMiddleware.swift in Sources */,
 				1F4D9DF829EAD38400A00DF2 /* StoreLocator.swift in Sources */,
 				1F4D9DF129EACE6600A00DF2 /* StarterViewController.swift in Sources */,
 				1F4D9DF629EACFFC00A00DF2 /* Command.swift in Sources */,
 				1F4D9DCF29EACACA00A00DF2 /* AppDelegate.swift in Sources */,
 				1F4D9DED29EACE5500A00DF2 /* StarterScreenFactory.swift in Sources */,
+				1FBC13162B8F3BA200E3FAEE /* AppCoordinator.swift in Sources */,
 				1F4D9DD129EACACA00A00DF2 /* SceneDelegate.swift in Sources */,
 				1F4D9DE729EACD3D00A00DF2 /* AppState.swift in Sources */,
 			);
